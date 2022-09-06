@@ -1,0 +1,33 @@
+
+
+#contenu{
+    display: none;
+    flex-direction: column;
+    animation: apparition 1s ease forwards ;
+}
+
+header{
+    /* position: fixed; */
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 30px;
+    border-radius: 10px;
+    border: solid white;
+    font-size: 30px;
+    /* background: rgb(253,253,253); */
+    /* background: linear-gradient(163deg, rgba(253,253,253,1) 0%, rgba(158,158,158,1) 100%); */
+    color: rgb(255, 255, 255);
+}
+
+header h1{
+    margin: 0;
+    font-family: 'Tourney';
+    font-size: 40px;
+}
+
+header span {
+    font-weight: 900;
+}
