@@ -11,6 +11,38 @@ body{
     background: rgb(0, 0, 0);
 }
 
+#masqueL {
+position: fixed;
+height: 100%;
+left: 0;
+background: #030712;
+
+}
+
+#masqueR{
+    position: fixed;
+height: 100%;
+right: 0;
+background: #030712
+}
+
+.animationSlide{
+    animation: slide 6s  ease forwards;
+}
+
+ @keyframes slide{
+    from{
+        width: 50%;
+    }
+    50%{
+        width: 50%;
+    }
+    to{
+        width: 0;
+    }
+}
+
+
 
 #acceuil {
     background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/fs/984b60152027075.6316ee896d072.jpg');
@@ -22,7 +54,6 @@ body{
     background-position-x: 42%;
     background-size:cover;
     background-repeat: no-repeat;
-    opacity: 0;
     
 }
 
@@ -42,23 +73,26 @@ body{
     background-repeat: no-repeat;
     font-family: 'Tourney';
     font-size: 25px;
-    opacity: 0%;
-    animation: apparition 2.5s ease 4s forwards ;
-}
-
-#acceuil h1,h2{
-    margin: 0;
-    font-size: 100px;
+    opacity: 0;
+    filter: blur(5px);
+    animation: apparition 2s ease 5s forwards;
 }
 
 @keyframes apparition {
     from{
-        opacity: 0%;
+        opacity: 0;
     }
     to{
+        filter: blur(0px);
         opacity: 100%;
     }
 }
+
+#acceuil h1,h2{
+    margin: 0;
+    font-size: 100px;  
+}
+
 
 #prenom{
     font-weight: 200;
@@ -85,12 +119,24 @@ body{
     display: inline-flex;
     justify-content: space-between;
     position: absolute;
-    bottom: 5%;
+    bottom: 1%;
     color: #fcf3e2;
     list-style: none;
     font-size: 30px;
     width: 200px;
-    animation: apparition 3s ease 5s forwards ;
+    animation: apparitionLogo 2s ease 6s forwards;
+}
+
+@keyframes apparitionLogo {
+        from{
+        opacity: 0;
+        bottom: 1%;
+    }
+    
+    to{
+        bottom: 5%;
+        opacity: 100%;
+    }
 }
 
 #acceuil li:hover{
@@ -99,70 +145,3 @@ body{
 
 }
 
-@keyframes apparition {
-    from{
-        opacity: 0%;
-    }
-    to{
-        opacity: 100%;
-    }
-}
-#masqueL {
-position: fixed;
-height: 100%;
-left: 0;
-background: linear-gradient(90deg, rgba(0,8,91,1) 0%, rgba(0,51,153,1) 48%, rgba(0, 82, 196) 100%);
-z-index: 10;
-}
-
-#masqueR{
-    position: fixed;
-height: 100%;
-right: 0;
-background: linear-gradient(270deg, rgba(0,8,91,1) 0%, rgba(0,51,153,1) 48%, rgb(0, 82, 196) 100%);
-z-index: 5;
-}
-
-.acceuilApparition{
-    animation: apparition 3s ease 1s forwards ;
-}
-
-
-.animationEnterSlide{
-    animation: enterB 2s  ease-in  forwards;
-}
-
-.animationEnter{
-    animation: enterA 2s ease forwards;
-}
-
-
-@keyframes enterB{
-    from{
-        width: 0;
-    }
-    50%{
-        width: 50%;
-        opacity: 100%;
-    }
-    
-    to{
-        opacity: 0%;
-    }
-
-}
-
-@keyframes enterA {
-    from{
-        opacity: 100%;
-        filter: blur(0);
-    }
-    50%{
-        opacity:100%;
-        filter: blur(3px);
-    }
-
-    to{
-        opacity: -60%;
-    }
-}
