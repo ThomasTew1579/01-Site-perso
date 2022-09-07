@@ -1,33 +1,141 @@
 
 
-#contenu{
-    display: none;
-    flex-direction: column;
-    animation: apparition 1s ease forwards ;
+@import url("https://fonts.googleapis.com/css2?family=Tourney:wght@200;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #030712;
+  /* background: #ffffff; */
+  display: flex;
+  flex-direction: column;
+  font-family: "Tourney";
 }
 
-header{
-    /* position: fixed; */
-    display:flex;
+
+/* navigateur/header============================================================================= */
+
+/* header----------------------------------------- */
+nav{
+    position: sticky;
+    /* background: rgb(245, 227, 227); */
+    background: #030712;
+    /* width: 100%; */
+    color: #fcf3e2;
+    display: flex;
+    padding: 20px 60px;
+}
+
+.navConteneur{
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    margin: 30px;
-    border-radius: 10px;
-    border: solid white;
+    width: 100%;
+    margin: 0px;
+    padding: 0;
     font-size: 30px;
-    /* background: rgb(253,253,253); */
-    /* background: linear-gradient(163deg, rgba(253,253,253,1) 0%, rgba(158,158,158,1) 100%); */
-    color: rgb(255, 255, 255);
 }
 
-header h1{
+/* -----------------------------------------header */
+
+/* nav/menu--------------------------------------- */
+
+#menuLogo{
+    content: \000A9;
+    margin: 0px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#navTitre{
+    margin: 0px;
+    padding: 0;
+}
+
+#menuLogo div{
+    width: 30px;
+    height: 0px;
+    border-radius: 1px;
+    border: solid 2px #fcf3e2;
+    transition: 0.2s;
+}
+
+.line#haut{
+    position: relative;
+    rotate: 45deg;
+    top: 10px;
+}
+
+.line#centre{
+    opacity: 0;
+}
+
+.line#bas{
+    position: relative;
+    rotate: -45deg;
+    top: -10px;
+}
+
+
+#menu{
+    position: sticky;
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    color: #fcf3e2;
+}
+
+.lineMenu{
+    border: 1px solid #fcf3e2;
+    height: 0;
+    /* width: 100%; */
     margin: 0;
-    font-family: 'Tourney';
-    font-size: 40px;
+    
 }
 
-header span {
-    font-weight: 900;
+.nav_item{
+    padding: 0 60px;
+    color: #fcf3e2;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
 }
+.fa-arrow-right{
+    font-size: 30px;
+}
+
+#contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fa-code{
+    margin: 40px;
+    height: 100%;
+    font-size: 30px;
+}
+
+.contact_nav{
+    font-family: "Varela Round";
+    font-size: 20px;
+    margin: 10px;
+    text-decoration: none;
+    color: #fcf3e2;
+
+}
+
+/* ---------------------------------------nav/menu */
+
+/* =============================================================================navigateur/header */

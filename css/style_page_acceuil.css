@@ -1,147 +1,204 @@
 /* https://mir-s3-cdn-cf.behance.net/project_modules/fs/9dba8f152033959.6317090b18e2d.jpg  blueReverse*/
 /* https://mir-s3-cdn-cf.behance.net/project_modules/fs/984b60152027075.6316ee896d072.jpg  blue */
 
+@import url("https://fonts.googleapis.com/css2?family=Tourney:wght@200;900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Tourney:wght@200;900&display=swap');
-
-
-body{
-    margin: 0;
-    padding: 0;
-    background: rgb(0, 0, 0);
+body {
+  margin: 0;
+  padding: 0;
+  background: #030712;
 }
 
+/* Ouverture /femeture============================================ */
+
+#titre {
+  position: fixed;
+  font-family: "Tourney";
+  font-size: 90px;
+  color: #fcf3e2;
+  bottom: 5%;
+  right: 15%;
+  animation: disparition 2s ease 2s forwards;
+}
+
+@keyframes disparition {
+  from {
+  }
+  to {
+    right: -40%;
+    opacity: 0%;
+  }
+}
 #masqueL {
-position: fixed;
-height: 100%;
-left: 0;
-background: #030712;
-
+  position: fixed;
+  height: 100%;
+  left: 0;
+  background: #030712;
 }
 
-#masqueR{
-    position: fixed;
-height: 100%;
-right: 0;
-background: #030712
+#masqueR {
+  position: fixed;
+  height: 100%;
+  right: 0;
+  background: #030712;
 }
 
-.animationSlide{
-    animation: slide 6s  ease forwards;
+.animationSlide {
+  animation: openSlide 6s ease -1s forwards;
 }
 
- @keyframes slide{
+@keyframes openSlide {
+  from {
+    width: 50%;
+  }
+  50% {
+    width: 50%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+.animationFermeture{
+    animation: closeSlide  3s ease 0s forwards;
+}
+
+@keyframes closeSlide {
     from{
-        width: 50%;
+        width: 0%;
     }
-    50%{
-        width: 50%;
-    }
+
     to{
-        width: 0;
+        width: 150%;
     }
-}
-
-
-
-#acceuil {
-    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/fs/984b60152027075.6316ee896d072.jpg');
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-position-x: 42%;
-    background-size:cover;
-    background-repeat: no-repeat;
     
 }
 
-#acceuil div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/fs/9dba8f152033959.6317090b18e2d.jpg');
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    background-position-x: 42%;
-    background-size:cover;
-    background-repeat: no-repeat;
-    font-family: 'Tourney';
-    font-size: 25px;
-    opacity: 0;
-    filter: blur(5px);
-    animation: apparition 2s ease 5s forwards;
+/* Ouverture /femeture============================================ */
+
+/* Acceuil============================================== */
+
+#acceuil {
+  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/984b60152027075.6316ee896d072.jpg");
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-position-x: 42%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#acceuil div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/9dba8f152033959.6317090b18e2d.jpg");
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-position-x: 42%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Tourney";
+  font-size: 25px;
+  opacity: 0;
+  filter: blur(5px);
+  animation: apparition 2s ease 5s forwards;
 }
 
 @keyframes apparition {
-    from{
-        opacity: 0;
-    }
-    to{
-        filter: blur(0px);
-        opacity: 100%;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    filter: blur(0px);
+    opacity: 100%;
+  }
 }
 
-#acceuil h1,h2{
-    margin: 0;
-    font-size: 100px;  
+/* titre-------------------------------- */
+#acceuil h1,
+h2 {
+  margin: 0;
+  font-size: 100px;
 }
 
-
-#prenom{
-    font-weight: 200;
+#prenom {
+  font-weight: 200;
 }
 
-#nom{
-    font-weight: 900;
+#nom {
+  font-weight: 900;
 }
 
-#entrer{
-    transition: 0.2s;
+#entrer {
+  transition: 0.2s;
 }
-#entrer:hover{
-    text-shadow: #ff5a12 0 0 5px;
-    color: #fcf3e2;
+#entrer:hover {
+  text-shadow: #ff5a12 0 0 5px;
+  color: #fcf3e2;
 }
+/* titre-------------------------------- */
 
+/* liste liens------------------------- */
 
-
-#acceuil ul{
-    opacity: 0%;
-    margin: 0;
-    padding: 0;
-    display: inline-flex;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 1%;
-    color: #fcf3e2;
-    list-style: none;
-    font-size: 30px;
-    width: 200px;
-    animation: apparitionLogo 2s ease 6s forwards;
+#acceuil ul {
+  opacity: 0%;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 1%;
+  color: #fcf3e2;
+  list-style: none;
+  font-size: 30px;
+  width: 200px;
+  animation: apparitionLogo 2s ease 6s forwards;
 }
 
 @keyframes apparitionLogo {
-        from{
-        opacity: 0;
-        bottom: 1%;
-    }
-    
-    to{
-        bottom: 5%;
-        opacity: 100%;
-    }
+  from {
+    opacity: 0;
+    bottom: 1%;
+  }
+
+  to {
+    bottom: 5%;
+    opacity: 100%;
+  }
 }
 
-#acceuil li:hover{
-    text-shadow: #ff5a12 0 0 5px;
-    
-
+#acceuil li:hover {
+  text-shadow: #ff5a12 0 0 5px;
 }
 
+a {
+  text-decoration: none;
+  color: #fcf3e2;
+  box-shadow: none;
+}
+/* liste liens------------------------- */
+
+/* Acceuil============================================== */
+
+/* Contenu annexe======================================= */
+
+#contenu {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  animation: apparition 1s ease forwards;
+  background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/893d6a152109661.6318375f0f71c.jpg);
+  background-position-x: 42%;
+}
+
+
+/* Contenu annexe======================================= */
