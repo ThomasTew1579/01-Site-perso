@@ -1,6 +1,6 @@
 // evenement page liste cartes=================================================
 
-// animation logo menu---------------------------------------------------------
+// animation menu--------------------------------------------------------------
 
 let btnMenu = document.getElementById("menuLogo");
 
@@ -36,12 +36,53 @@ btnMenu.addEventListener("click", () => {
   }
 });
 
-// ---------------------------------------------------------animation logo menu
+// --------------------------------------------------------------animation menu
 
-// animation apparition menu---------------------------------------------------
+// annimation carte section----------------------------------------------------
+
+let carte = document.getElementsByClassName('carte')
+let text = carte.querySelector
+
+document.querySelector('.C1').addEventListener("click", () => {
+  for(const index in carte){
+    if(index < carte.length)
+    carte[index].style.flexGrow = "0";
+    document.querySelector(".liste_cartes p").style.display = "none";
+  };
+  document.querySelector(".C1").style.flexGrow = 2;
+  document.querySelector(".C1 p").style.display = "flex";
+
+});
+
+document.querySelector('.C2').addEventListener("click", () => {
+  for(const index in carte){
+    if(index < carte.length)
+    carte[index].style.flexGrow = "0";
+  };
+  document.querySelector(".C2").style.flexGrow = 2;
+  document.querySelector(".C2 p").style.display = "flex";
+});
+
+document.querySelector('.C3').addEventListener("click", () => {
+  for(const index in carte){
+    if(index < carte.length)
+    carte[index].style.flexGrow = "0";
+  };
+  document.querySelector(".C3").style.flexGrow = 2;
+  document.querySelector(".C3 p").style.display = "flex";
+});
+
+document.querySelector('.C4').addEventListener("click", () => {
+  for(const index in carte){
+    if(index < carte.length)
+    carte[index].style.flexGrow = "0";
+  };
+  document.querySelector(".C4").style.flexGrow = 2;
+  document.querySelector(".C4 p").style.display = "flex";
+});
 
 
 
-// ---------------------------------------------------animation apparition menu
+// ----------------------------------------------------annimation carte section
 
 // =================================================evenement page liste cartes

@@ -1,0 +1,40 @@
+.liste_cartes{
+    color: #fcf3e2;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: calc(100vh - 90px);
+    opacity: 0;
+    animation: apparition_cartes 2s ease 2s forwards;
+}
+
+@keyframes apparition_cartes {
+    to{
+        opacity: 100%;
+    }
+}
+
+.carte{
+    margin: 10px 30px;
+    color: rgb(0, 0, 0);
+    background-color: #ffff;
+    border-radius: 30px;
+    transition: 0.5s ease;
+    text-align: center;
+}
+
+.C1 {
+    flex-grow: 1;
+}
+
+.carte p {
+    display: none;
+}
+
+.C1 p {
+    display: flex;
+}
+
+

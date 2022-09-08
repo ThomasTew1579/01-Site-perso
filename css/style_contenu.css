@@ -7,7 +7,6 @@ body {
   margin: 0;
   padding: 0;
   background: #030712;
-  /* background: #ffffff; */
   display: flex;
   flex-direction: column;
   font-family: "Tourney";
@@ -19,8 +18,9 @@ body {
 /* header----------------------------------------- */
 nav{
     position: sticky;
+    top: 0;
     background: #030712;
-    color: #fcf3e2;
+    color: #ffff;
     display: flex;
     padding: 20px 60px;
 }
@@ -36,7 +36,7 @@ nav{
     padding: 0;
     font-size: 30px;
     opacity: 0;
-    animation: apparition_nav 2s ease-out 0.5s forwards;
+    animation: apparition_nav 2s ease-out forwards;
 }
 
 @keyframes apparition_nav {
@@ -55,6 +55,7 @@ nav{
 /* nav/menu--------------------------------------- */
 
 #menuLogo{
+    cursor: pointer;
     content: \000A9;
     margin: 0px;
     padding: 0;
@@ -71,7 +72,7 @@ nav{
 }
 
 #menuLogo div{
-    width: 30px;
+
     height: 0px;
     border-radius: 1px;
     border: solid 2px #fcf3e2;
@@ -96,15 +97,16 @@ nav{
 
 
 #menu{
-    /* position: sticky; */
+    background: #030712;
+    position: fixed;
+    z-index: 10;
+    top: 90px;
     height: calc(100vh - 90px);
     width: 100%;
     display: none; /*   flex dans liste_cartes.js - ligne: 14 */
-    /* display: flex;       */
     flex-direction: column;
     justify-content: space-between;
     color: #fcf3e2;
-    /* background-color: red; */
     opacity: 0;
     transition: 2s;
     animation: 2s ease 0.2s forwards;
@@ -173,7 +175,6 @@ a {
 }
 
 #menu ul {
-    /* opacity: 0%; */
     margin-left: calc((100vw - 200px)/2);
     padding: 0;
     display: inline-flex;
