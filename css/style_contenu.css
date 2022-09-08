@@ -19,15 +19,14 @@ body {
 /* header----------------------------------------- */
 nav{
     position: sticky;
-    /* background: rgb(245, 227, 227); */
     background: #030712;
-    /* width: 100%; */
     color: #fcf3e2;
     display: flex;
     padding: 20px 60px;
 }
 
 .navConteneur{
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -36,6 +35,19 @@ nav{
     margin: 0px;
     padding: 0;
     font-size: 30px;
+    opacity: 0;
+    animation: apparition_nav 2s ease-out 0.5s forwards;
+}
+
+@keyframes apparition_nav {
+    from{
+        opacity: 0;
+        top: -90px;
+    }
+    to{
+        opacity: 100%;
+        top: 0;
+    }
 }
 
 /* -----------------------------------------header */
@@ -84,33 +96,52 @@ nav{
 
 
 #menu{
-    position: sticky;
-    height: 100%;
+    /* position: sticky; */
+    height: calc(100vh - 90px);
     width: 100%;
-    display: none;
+    display: none; /*   flex dans liste_cartes.js - ligne: 14 */
+    /* display: flex;       */
     flex-direction: column;
+    justify-content: space-between;
     color: #fcf3e2;
+    /* background-color: red; */
+    opacity: 0;
+    transition: 2s;
+    animation: 2s ease 0.2s forwards;
 }
 
-.lineMenu{
-    border: 1px solid #fcf3e2;
-    height: 0;
-    /* width: 100%; */
-    margin: 0;
-    
+@keyframes apparition_menu {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 100%;
+    }
 }
+
+@keyframes disparition_menu {
+    from{
+        opacity: 100%;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
 
 .nav_item{
     padding: 0 60px;
     color: #fcf3e2;
-    height: 100%;
+    height: 78px;
     position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     text-decoration: none;
+    opacity: 0;
 }
+
 .fa-arrow-right{
     font-size: 30px;
 }
@@ -118,23 +149,123 @@ nav{
 #contact{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    height: 50vmax;
 }
 
 .fa-code{
-    margin: 40px;
-    height: 100%;
+    padding: 30px;
     font-size: 30px;
+    color: #ff5a12;
 }
 
 .contact_nav{
     font-family: "Varela Round";
     font-size: 20px;
-    margin: 10px;
+    margin: 5px;
     text-decoration: none;
     color: #fcf3e2;
-
 }
+
+a {
+    color: #fcf3e2;
+}
+
+#menu ul {
+    /* opacity: 0%; */
+    margin-left: calc((100vw - 200px)/2);
+    padding: 0;
+    display: inline-flex;
+    justify-content: space-between;
+    color: #fcf3e2;
+    list-style: none;
+    font-size: 30px;
+    width: 200px;
+    position: relative;
+    opacity: 0;
+    animation: apparition_logo 1s ease 2s forwards;
+}
+
+@keyframes apparition_logo {
+    from{
+        opacity: 0;
+        bottom: -3%;
+    }
+    to{
+        bottom: 0;
+        opacity: 100%;
+    }
+}
+
+.lineMenu{
+    border: 1px solid #fcf3e2;
+    height: 0;
+    margin: 0;
+    position: relative;
+    opacity: 0;
+}
+
+/* apparition des LIGNES du menu --- */
+
+.L1{
+    animation: apparition_ligne 2s ease  forwards ;
+}
+.L2{
+    animation: apparition_ligne 2s ease 0.2s forwards;
+}
+.L3{
+    animation: apparition_ligne 2s ease 0.4s forwards ;
+}
+.L4{
+    animation: apparition_ligne 2s ease 0.6s forwards;
+}
+.L5{
+    animation: apparition_ligne 2s ease 0.8s forwards;
+}
+
+@keyframes apparition_ligne {
+    from{
+        opacity: 0;
+        left: -100vw;
+    }
+    to{
+        left: 0;
+        opacity: 100%;
+    }
+    
+}
+
+/* --- apparition des LIGNES du menu */
+
+/* apparition des SECTIONS du menu --- */
+
+.S1{
+    animation: apparition_section 3s ease 1s forwards ;
+}
+.S2{
+    animation: apparition_section 3s ease 1.2s forwards;
+}
+.S3{
+    animation: apparition_section 3s ease 1.4s forwards ;
+}
+.S4{
+    animation: apparition_section 3s ease 1.6s forwards;
+}
+.S5{
+    animation: apparition_section 3s ease 1.8s forwards;
+}
+
+@keyframes apparition_section {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 100%;
+    }
+    
+}
+/* --- apparition des SECTIONS du menu */
 
 /* ---------------------------------------nav/menu */
 
