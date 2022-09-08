@@ -39,6 +39,7 @@ btnMenu.addEventListener("click", () => {
 // --------------------------------------------------------------animation menu
 
 // annimation carte section----------------------------------------------------
+// on peut faire plus simple en jQuery avec addClass et removeClass------------
 
 let carte = document.getElementsByClassName('carte')
 let text = carte.querySelector
@@ -47,10 +48,10 @@ document.querySelector('.C1').addEventListener("click", () => {
   for(const index in carte){
     if(index < carte.length)
     carte[index].style.flexGrow = "0";
-    document.querySelector(".liste_cartes p").style.display = "none";
+    document.querySelector(".texte").style.display = "none";
+    document.querySelector(".C1").style.flexGrow = 2;
+    document.querySelector(".texte").style.display = "flex";
   };
-  document.querySelector(".C1").style.flexGrow = 2;
-  document.querySelector(".C1 p").style.display = "flex";
 
 });
 
@@ -58,27 +59,28 @@ document.querySelector('.C2').addEventListener("click", () => {
   for(const index in carte){
     if(index < carte.length)
     carte[index].style.flexGrow = "0";
+    carte[index].style.height = "60px";
+    document.querySelector(".C2").style.flexGrow = 2;
+    document.querySelector(".texte").style.display = "flex";
   };
-  document.querySelector(".C2").style.flexGrow = 2;
-  document.querySelector(".C2 p").style.display = "flex";
 });
 
 document.querySelector('.C3').addEventListener("click", () => {
   for(const index in carte){
     if(index < carte.length)
     carte[index].style.flexGrow = "0";
+    document.querySelector(".C3").style.flexGrow = 2;
+    document.querySelector(".texte").style.display = "flex";
   };
-  document.querySelector(".C3").style.flexGrow = 2;
-  document.querySelector(".C3 p").style.display = "flex";
 });
 
 document.querySelector('.C4').addEventListener("click", () => {
   for(const index in carte){
     if(index < carte.length)
     carte[index].style.flexGrow = "0";
+    document.querySelector(".C4").style.flexGrow = 2;
+    document.querySelector(".texte").style.display = "flex";
   };
-  document.querySelector(".C4").style.flexGrow = 2;
-  document.querySelector(".C4 p").style.display = "flex";
 });
 
 

@@ -108,8 +108,8 @@ nav{
     justify-content: space-between;
     color: #fcf3e2;
     opacity: 0;
-    transition: 2s;
-    animation: 2s ease 0.2s forwards;
+    transition: 1s;
+    animation: 1s ease forwards;
 }
 
 @keyframes apparition_menu {

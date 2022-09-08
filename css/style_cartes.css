@@ -17,24 +17,21 @@
 }
 
 .carte{
-    margin: 10px 30px;
+    cursor: pointer;
+    margin: 10px 50px;
     color: rgb(0, 0, 0);
-    background-color: #ffff;
+    background: rgb(125,125,125);
+    background: linear-gradient(0deg, rgb(160, 160, 160) 0%, rgba(255,255,255,1) 100%);
     border-radius: 30px;
     transition: 0.5s ease;
     text-align: center;
+    font-family: "Varela Round";
+
 }
 
 .C1 {
     flex-grow: 1;
 }
 
-.carte p {
-    display: none;
-}
-
-.C1 p {
-    display: flex;
-}
-
+.active 
 
