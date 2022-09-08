@@ -48,9 +48,9 @@ document.querySelector('.C1').addEventListener("click", () => {
   for(const index in carte){
     if(index < carte.length)
     carte[index].style.flexGrow = "0";
-    document.querySelector(".texte").style.display = "none";
+    document.querySelector(".contenu_carte").style.display = "none";
     document.querySelector(".C1").style.flexGrow = 2;
-    document.querySelector(".texte").style.display = "flex";
+    document.querySelector(".contenu_carte").style.display = "flex";
   };
 
 });
@@ -61,7 +61,7 @@ document.querySelector('.C2').addEventListener("click", () => {
     carte[index].style.flexGrow = "0";
     carte[index].style.height = "60px";
     document.querySelector(".C2").style.flexGrow = 2;
-    document.querySelector(".texte").style.display = "flex";
+    document.querySelector(".contenu_carte").style.display = "flex";
   };
 });
 
@@ -70,7 +70,7 @@ document.querySelector('.C3').addEventListener("click", () => {
     if(index < carte.length)
     carte[index].style.flexGrow = "0";
     document.querySelector(".C3").style.flexGrow = 2;
-    document.querySelector(".texte").style.display = "flex";
+    document.querySelector(".contenu_carte").style.display = "flex";
   };
 });
 
@@ -79,7 +79,7 @@ document.querySelector('.C4').addEventListener("click", () => {
     if(index < carte.length)
     carte[index].style.flexGrow = "0";
     document.querySelector(".C4").style.flexGrow = 2;
-    document.querySelector(".texte").style.display = "flex";
+    document.querySelector(".contenu_carte").style.display = "flex";
   };
 });
 

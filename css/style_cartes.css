@@ -21,17 +21,31 @@
     margin: 10px 50px;
     color: rgb(0, 0, 0);
     background: rgb(125,125,125);
-    background: linear-gradient(0deg, rgb(160, 160, 160) 0%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(-10deg, rgba(255, 255, 255, 0.403) 0%, rgba(255,255,255,1) 100%);
     border-radius: 30px;
     transition: 0.5s ease;
     text-align: center;
     font-family: "Varela Round";
-
+    
 }
+
+.contenu_carte{
+    display: none;
+    justify-content: space-evenly;
+    flex-direction: column;
+} 
 
 .C1 {
     flex-grow: 1;
 }
 
-.active 
+.C1 .contenu_carte{
+    display: flex;
+}
+
+.C1 img{
+    width: 100%;
+    border-radius: 50%;
+}
+
 
