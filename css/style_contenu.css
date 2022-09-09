@@ -6,13 +6,16 @@
 body {
   margin: 0;
   padding: 0;
-  background: #030712;
-  background: linear-gradient(0deg, rgba(3,7,18,0.8225884103641457) 0%, rgba(3,7,18,1) 100%);
   display: flex;
+  /* background: #030712;  */
+  background: linear-gradient(0deg, rgb(52, 52, 52) 0%, rgba(3,7,18,1) 70%);
   flex-direction: column;
   font-family: "Tourney";
-  transition: 2s;
+  transition: 1s;
+  animation: changement_background 2s ease forwards;
 }
+
+
 
 
 /* navigateur/header============================================================================= */
@@ -25,6 +28,7 @@ nav{
     color: #ffff;
     display: flex;
     padding: 20px 60px;
+    z-index: 10;
 }
 
 .navConteneur{

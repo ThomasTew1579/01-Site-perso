@@ -18,7 +18,7 @@
 
 .carte{
     cursor: pointer;
-    margin: 10px 50px;
+    margin: 10px 30px;
     color: rgb(0, 0, 0);
     background: rgb(125,125,125);
     background: linear-gradient(-10deg, rgba(255, 255, 255, 0.403) 0%, rgba(255,255,255,1) 100%);
@@ -26,6 +26,7 @@
     transition: 0.5s ease;
     text-align: center;
     font-family: "Varela Round";
+    height: 60px;
 }
 
 .titre_carte{
@@ -35,6 +36,7 @@
 
 .titre_carte h3{
     flex-grow: 1;
+    font-family: "Tourney";
 }
 
 .titre_carte i{
@@ -47,26 +49,63 @@
 
 .contenu_carte{
     display: none;
-    justify-content: space-evenly;
+    height: 50vmax;
+    margin: 5%;
+    justify-content: space-between;
     flex-direction: column;
+    font-size: 4vmin;
+    text-justify:inter-word;
+    text-align:left;
+    opacity: 0;
 } 
 
-.contenu_carte ul{
-    list-style: none;
-    padding: 10px;
+.contenu_carte i{
+    text-align: center;
+    font-size: 40px;
+}
+
+
+/* premiere carte directment ouverte a l'ouverture de la page */
+.C1 .contenu_carte{
+    display: flex;
+    opacity: 100%;
 }
 
 .C1 {
+    background: linear-gradient(-10deg, rgba(255, 255, 255, 0.5) 0%, rgba(255,255,255,1) 90%), url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/893d6a152109661.6318375f0f71c.jpg);
+    background-position:  40%;
     flex-grow: 1;
 }
 
-.C1 .contenu_carte{
+.C1 a {
+    color: black;
+}
+
+.contact_carte,.lien_carte{
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+
+.lien_carte{
     display: flex;
-}
-
-.C1 img{
-    width: 100%;
-    border-radius: 50%;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 
+
+.C2 {
+    background: linear-gradient(-10deg, rgba(255, 255, 255, 0.5) 0%, rgba(255,255,255,1) 90%), url(https://www.eurosono.com/site/images/normal/LocationdematrielsonlumiereetVideoLyonEurosono94jpg_5e5cb49c10152.jpg);
+    background-position:  51%;
+}
+
+.C3 {
+    background: linear-gradient(-10deg, rgba(255, 255, 255, 0.5) 0%, rgba(255,255,255,1) 90%), url(../images/light\ wyg.PNG);
+    background-position:  50%, 50%;
+}
+
+.C4 {
+    background: linear-gradient(-10deg, rgba(255, 255, 255, 0.5) 0%, rgba(255,255,255,1) 90%), url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/70c923152276535.631b0623d30fa.jpg);
+    background-position: 50%;
+}
