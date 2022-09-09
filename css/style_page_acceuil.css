@@ -60,7 +60,7 @@ body {
 }
 
 .animationFermeture{
-    animation: closeSlide  3s ease 0s forwards;
+  animation: closeSlide  3s ease 0s forwards;
 }
 
 @keyframes closeSlide {
@@ -137,6 +137,7 @@ h2 {
 }
 
 #entrer {
+  cursor: pointer;
   transition: 0.2s;
 }
 #entrer:hover {
