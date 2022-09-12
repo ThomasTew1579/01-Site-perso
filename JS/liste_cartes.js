@@ -39,29 +39,23 @@ btnMenu.addEventListener("click", () => {
 // --------------------------------------------------------------animation menu
 
 // annimation carte section----------------------------------------------------
-// on peut faire plus simple en jQuery avec addClass et removeClass------------
 
 let contenuCarte = document.getElementsByClassName("contenu_carte");
-console.log(contenuCarte);
 let carte = document.getElementsByClassName("carte")
-console.log(carte[0].style.display)
-
+let listeCarte = document.querySelector(".liste_cartes");
+let section = document.getElementsByClassName("section");
 
 document.querySelector('.C2').addEventListener("click", () => {
   for(const index in carte){
     if (index <= 3) {
       carte[index].classList.remove("activeCarte");
+      carte[index].classList.remove("background");
       carte[0].classList.add("activeCarte");
-
+      carte[0].classList.add("background");
+      
       contenuCarte[index].classList.remove("activeContenu");
       contenuCarte[0].classList.add("activeContenu");
-
-      // carte[index].style.flexGrow = 0;
-      // carte[0].style.flexGrow = 1;
-      // contenuCarte[index]["style"]["display"] = "none";
-      // contenuCarte[0]["style"]["display"] = "flex";
-      // contenuCarte[index]["style"]["opacity"] = "0";
-      // contenuCarte[0]["style"]["opacity"] = "100%"; 
+      
     }
   };
 });
@@ -69,18 +63,14 @@ document.querySelector('.C2').addEventListener("click", () => {
 document.querySelector('.C3').addEventListener("click", () => {
   for(const index in carte){
     if (index <= 3) {
+      carte[index].classList.remove("background");
       carte[index].classList.remove("activeCarte");
       carte[1].classList.add("activeCarte");
-
+      carte[1].classList.add("background");
+      
       contenuCarte[index].classList.remove("activeContenu");
       contenuCarte[1].classList.add("activeContenu");
-
-      // carte[index].style.flexGrow = 0;
-      // carte[1].style.flexGrow = 1;
-      // contenuCarte[index]["style"]["display"] = "none";
-      // contenuCarte[1]["style"]["display"] = "flex";
-      // contenuCarte[index]["style"]["opacity"] = "0";
-      // contenuCarte[1]["style"]["opacity"] = "100%"; 
+      
     }
   };
 });
@@ -88,18 +78,14 @@ document.querySelector('.C3').addEventListener("click", () => {
 document.querySelector('.C4').addEventListener("click", () => {
   for(const index in carte){
     if (index <= 3) {
+      carte[index].classList.remove("background");
       carte[index].classList.remove("activeCarte");
       carte[2].classList.add("activeCarte");
-
+      carte[2].classList.add("background");
+      
       contenuCarte[index].classList.remove("activeContenu");
       contenuCarte[2].classList.add("activeContenu");
-
-      // carte[index].style.flexGrow = 0;
-      // carte[2].style.flexGrow = 1;
-      // contenuCarte[index]["style"]["display"] = "none";
-      // contenuCarte[2]["style"]["display"] = "flex";
-      // contenuCarte[index]["style"]["opacity"] = "0";
-      // contenuCarte[2]["style"]["opacity"] = "100%"; 
+      
     }
   };
 });
@@ -107,23 +93,28 @@ document.querySelector('.C4').addEventListener("click", () => {
 document.querySelector('.C1').addEventListener("click", () => {
   for (const index in contenuCarte) {
     if (index <= 3) {
+      carte[index].classList.remove("background");
       carte[index].classList.remove("activeCarte");
       carte[3].classList.add("activeCarte");
-
+      carte[3].classList.add("background");
+      
       contenuCarte[index].classList.remove("activeContenu");
       contenuCarte[3].classList.add("activeContenu");
-      
-
-      // carte[index].style.flexGrow = 0;                             
-      // carte[3].style.flexGrow = 1;                              
-      // contenuCarte[index]["style"]["display"] = "none";             
-      // contenuCarte[3]["style"]["display"] = "flex";             
-      // contenuCarte[index]["style"]["opacity"] = "0";             
-      // contenuCarte[3]["style"]["opacity"] = "100%";             
+          
     }
   };
   
 });
+
+contenuCarte[0].addEventListener("click", () => {
+  listeCarte.style.animationDuration="1s"
+  listeCarte.style.animationName ="disparition"
+  setTimeout( () => { 
+    listeCarte.style.display ="none";
+    section[0].style.display ="flex"
+
+},1000)
+})
 
 // ----------------------------------------------------annimation carte section
 

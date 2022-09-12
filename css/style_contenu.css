@@ -7,8 +7,8 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  /* background: #030712;  */
-  background: linear-gradient(0deg, rgb(52, 52, 52) 0%, rgba(3,7,18,1) 70%);
+  background: #030712; 
+  /* background: linear-gradient(0deg, rgb(52, 52, 52) 0%, rgba(3,7,18,1) 70%); */
   flex-direction: column;
   font-family: "Tourney";
   transition: 1s;
@@ -248,22 +248,22 @@ a {
 /* apparition des SECTIONS du menu --- */
 
 .S1{
-    animation: apparition_section 3s ease 1s forwards ;
+    animation: apparition_section_menu 3s ease 1s forwards ;
 }
 .S2{
-    animation: apparition_section 3s ease 1.2s forwards;
+    animation: apparition_section_menu 3s ease 1.2s forwards;
 }
 .S3{
-    animation: apparition_section 3s ease 1.4s forwards ;
+    animation: apparition_section_menu 3s ease 1.4s forwards ;
 }
 .S4{
-    animation: apparition_section 3s ease 1.6s forwards;
+    animation: apparition_section_menu 3s ease 1.6s forwards;
 }
 .S5{
-    animation: apparition_section 3s ease 1.8s forwards;
+    animation: apparition_section_menu 3s ease 1.8s forwards;
 }
 
-@keyframes apparition_section {
+@keyframes apparition_section_menu {
     from{
         opacity: 0;
     }
@@ -277,3 +277,33 @@ a {
 /* ---------------------------------------nav/menu */
 
 /* =============================================================================navigateur/header */
+
+/* Section======================================================================================= */
+
+.section {
+    margin: 5px 10px;
+    color: rgb(0, 0, 0);
+    background: rgb(125,125,125);
+    background: linear-gradient(-10deg, rgba(255, 255, 255, 0.826) 0%, rgba(255, 250, 240,1) 100%);
+    border-radius: 10px;
+    transition: 0.5s ease;
+    font-family: "Varela Round";
+    display: none;
+    flex-direction: column;
+    opacity: 0;
+    animation: apparitio_section 2s ease 1s forwards;
+}
+
+@keyframes apparitio_section {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+
+
+
+
+/* =======================================================================================Section */

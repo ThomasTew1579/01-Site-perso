@@ -65,12 +65,12 @@ body {
 
 @keyframes closeSlide {
   from{
-    background: linear-gradient(0deg, rgb(52, 52, 52) 0%, rgba(3,7,18,1) 70%);
+    /* background: linear-gradient(0deg, rgb(52, 52, 52) 0%, rgba(3,7,18,1) 70%); */
     width: 0%;
   }
   
   to{
-    background: linear-gradient(0deg, rgb(52, 52, 52) 0%, rgba(3,7,18,1) 70%);
+    /* background: linear-gradient(0deg, rgb(52, 52, 52) 0%, rgba(3,7,18,1) 70%); */
     width: 150%;
     }
     

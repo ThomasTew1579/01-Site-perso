@@ -6,13 +6,34 @@
     margin: 0;
     padding: 0;
     height: calc(100vh - 90px);
-    opacity: 0;
-    animation: apparition_cartes 2s ease 2s forwards;
+    animation: apparition 4s ease  forwards;
 }
 
-@keyframes apparition_cartes {
+.apparition{
+}
+
+@keyframes apparition {
+    from{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
     to{
         opacity: 100%;
+    }
+}
+
+.disparition{
+    animation: disparition 1s ease forwards;
+}
+
+@keyframes disparition {
+    from{
+        opacity: 100%;
+    }
+    to{
+        opacity: 0%;
     }
 }
 
@@ -21,7 +42,7 @@
     margin: 5px 10px;
     color: rgb(0, 0, 0);
     background: rgb(125,125,125);
-    background: linear-gradient(-10deg, rgba(255, 255, 255, 0.403) 0%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(-10deg, rgba(255, 255, 255, 0.547) 0%, rgba(255, 250, 240,1) 100%);
     border-radius: 10px;
     transition: 0.5s ease;
     text-align: center;
@@ -65,6 +86,11 @@
     font-size: 40px;
 }
 
+.contenu_carte h4{
+    text-align: center;
+    color: black;
+}
+
 .activeCarte{
     flex-grow: 2;
 }
@@ -83,7 +109,7 @@
 
 /* carte presentation------------ */
 
-.C1 {
+.C1.background {
     background: linear-gradient(-10deg, rgba(255, 255, 255, 0.5) 0%, rgba(255,255,255,1) 90%), url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/893d6a152109661.6318375f0f71c.jpg);
     background-position:  40%;
 }
@@ -110,16 +136,18 @@
 
 /* carte experience-------------- */
 
-.C2 {
+.C2.background {
     background: linear-gradient(-10deg, rgba(255, 255, 255, 0.5) 0%, rgba(255,255,255,1) 90%), url(../images/IMG_0768.jpeg);
     background-position: 50%;
 }
+
+
 
 /* --------------carte experience */
 
 /* carte logiciel---------------- */
 
-.C3 {
+.C3.background {
     background: linear-gradient(-10deg, rgba(255, 255, 255, 0.5) 0%, rgba(255,255,255,1) 90%), url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/3f0b08152450191.631eda6d6a397.jpg);
     background-position:  50%, 50%;
 }
@@ -128,9 +156,17 @@
 
 /* carte diplomes---------------- */
 
-.C4 {
+.C4.background {
     background: linear-gradient(-10deg, rgba(255, 255, 255, 0.5) 0%, rgba(255,255,255,1) 90%), url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/70c923152276535.631b0623d30fa.jpg);
     background-position: 50%;
 }
+
+.C4 ul{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 
 /* ----------------carte diplomes */
