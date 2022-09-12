@@ -18,15 +18,16 @@
 
 .carte{
     cursor: pointer;
-    margin: 10px 30px;
+    margin: 5px 10px;
     color: rgb(0, 0, 0);
     background: rgb(125,125,125);
     background: linear-gradient(-10deg, rgba(255, 255, 255, 0.403) 0%, rgba(255,255,255,1) 100%);
-    border-radius: 30px;
+    border-radius: 10px;
     transition: 0.5s ease;
     text-align: center;
     font-family: "Varela Round";
     height: 60px;
+    flex-grow: 0;
 }
 
 .titre_carte{
@@ -49,11 +50,11 @@
 
 .contenu_carte{
     display: none;
-    height: 50vmax;
-    margin: 5%;
-    justify-content: space-between;
+    height: 50vh;
+    margin: 0 5% 0 5%;
+    justify-content: space-evenly;
     flex-direction: column;
-    font-size: 4vmin;
+    font-size: 2vmax;
     text-justify:inter-word;
     text-align:left;
     opacity: 0;
@@ -64,21 +65,32 @@
     font-size: 40px;
 }
 
-
-/* premiere carte directment ouverte a l'ouverture de la page */
-.C1 .contenu_carte{
-    display: flex;
-    opacity: 100%;
+.activeCarte{
+    flex-grow: 2;
 }
+
+.activeContenu{
+    display: flex;
+    opacity: 0;
+    animation: apparition_contenue_carte 0.5s linear 0.5s forwards;
+}
+
+@keyframes apparition_contenue_carte {
+    to{
+        opacity: 100%;
+    }
+}
+
+/* carte presentation------------ */
 
 .C1 {
     background: linear-gradient(-10deg, rgba(255, 255, 255, 0.5) 0%, rgba(255,255,255,1) 90%), url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/893d6a152109661.6318375f0f71c.jpg);
     background-position:  40%;
-    flex-grow: 1;
 }
 
 .C1 a {
     color: black;
+    font-size: 2vmax;
 }
 
 .contact_carte,.lien_carte{
@@ -91,21 +103,34 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin: 10px;
 }
 
+/* ------------carte presentation */
 
+/* carte experience-------------- */
 
 .C2 {
-    background: linear-gradient(-10deg, rgba(255, 255, 255, 0.5) 0%, rgba(255,255,255,1) 90%), url(https://www.eurosono.com/site/images/normal/LocationdematrielsonlumiereetVideoLyonEurosono94jpg_5e5cb49c10152.jpg);
-    background-position:  51%;
+    background: linear-gradient(-10deg, rgba(255, 255, 255, 0.5) 0%, rgba(255,255,255,1) 90%), url(../images/IMG_0768.jpeg);
+    background-position: 50%;
 }
 
+/* --------------carte experience */
+
+/* carte logiciel---------------- */
+
 .C3 {
-    background: linear-gradient(-10deg, rgba(255, 255, 255, 0.5) 0%, rgba(255,255,255,1) 90%), url(../images/light\ wyg.PNG);
+    background: linear-gradient(-10deg, rgba(255, 255, 255, 0.5) 0%, rgba(255,255,255,1) 90%), url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/3f0b08152450191.631eda6d6a397.jpg);
     background-position:  50%, 50%;
 }
+
+/* ----------------carte logiciel */
+
+/* carte diplomes---------------- */
 
 .C4 {
     background: linear-gradient(-10deg, rgba(255, 255, 255, 0.5) 0%, rgba(255,255,255,1) 90%), url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/70c923152276535.631b0623d30fa.jpg);
     background-position: 50%;
 }
+
+/* ----------------carte diplomes */

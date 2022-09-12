@@ -27,7 +27,7 @@ nav{
     background: #030712;
     color: #ffff;
     display: flex;
-    padding: 20px 60px;
+    padding: 20px 30px;
     z-index: 10;
 }
 
@@ -172,11 +172,11 @@ nav{
     font-family: "Varela Round";
     font-size: 20px;
     margin: 5px;
-    text-decoration: none;
     color: #fcf3e2;
 }
 
 a {
+    text-decoration: none;
     color: #fcf3e2;
 }
 

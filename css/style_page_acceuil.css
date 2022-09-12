@@ -14,7 +14,7 @@ body {
 #titre {
   position: fixed;
   font-family: "Tourney";
-  font-size: 90px;
+  font-size: 8vmax;
   color: #fcf3e2;
   bottom: 5%;
   right: 15%;
@@ -124,10 +124,9 @@ body {
 }
 
 /* titre-------------------------------- */
-#acceuil h1,
-h2 {
+#acceuil h1 {
   margin: 0;
-  font-size: 100px;
+  font-size: 15vmin;
 }
 
 #prenom {
