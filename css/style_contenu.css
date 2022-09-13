@@ -291,7 +291,7 @@ a {
     display: none;
     flex-direction: column;
     opacity: 0;
-    animation: apparitio_section 2s ease 1s forwards;
+    animation: apparitio_section 2s ease forwards;
 }
 
 @keyframes apparitio_section {
