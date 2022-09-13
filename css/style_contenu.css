@@ -303,7 +303,16 @@ a {
     }
 }
 
+.ligne_formation{
+    margin: 0;
+    padding: 3vw;
+    height: calc(60vh - 90px);
+    border-radius: 10px;
+}
 
+.paire{
+    background-color: #03071220;
+}
 
 
 /* =======================================================================================Section */

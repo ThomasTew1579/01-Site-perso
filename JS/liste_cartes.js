@@ -182,12 +182,12 @@ document.querySelector('.C4').addEventListener("click", () => {
   };
 });
 
-contenuCarte[0].addEventListener("click", () => {
+contenuCarte[2].addEventListener("click", () => {
   listeCarte.style.animationDuration = "1s";
   listeCarte.style.animationName = "disparition";
   setTimeout(() => {
     listeCarte.style.display = "none";
-    section[0].style.display = "flex";
+    section[2].style.display = "flex";
   }, 1000);
 });
 

@@ -9,8 +9,6 @@
     animation: apparition 4s ease  forwards;
 }
 
-.apparition{
-}
 
 @keyframes apparition {
     from{
