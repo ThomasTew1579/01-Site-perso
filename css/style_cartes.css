@@ -155,14 +155,14 @@
     background-position:  50%, 50%;
 }
 
-.C3 .ligne_logo{
+.ligne_logo{
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
     align-items: center;
 }
 
-.C3 img{
+.ligne_logo img{
     height: 6vh;
 }
 .ligne_logo i{
