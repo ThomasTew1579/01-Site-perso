@@ -300,14 +300,13 @@ a {
     flex-direction: column;
     opacity: 0;
     animation: apparitio_section 2s ease forwards;
-
+    
     max-width: 900px ;
 }
 
 #Mon_experience a{
     color: black;
     text-decoration:underline;
-    /* position: relative; */
 }
 
 #Mon_experience img{
@@ -339,7 +338,7 @@ a {
     background: linear-gradient(180deg, rgba(252,252,252,0) 0%, rgba(3, 7, 18, 0.045) 100%);
 }
 
-.ligne_section 
+
 
 
 /* =======================================================================================Section */
