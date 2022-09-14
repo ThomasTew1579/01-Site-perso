@@ -55,6 +55,16 @@ presentationMenu.addEventListener("click", () => {
   setTimeout(() => {
     menu.style.display = "none";
   }, 1000);
+
+  if (lineMenuH.className == "line") {
+    lineMenuH.className = "";
+    lineMenuC.className = "";
+    lineMenuB.className = "";
+  } else {
+    lineMenuH.className = "line";
+    lineMenuC.className = "line";
+    lineMenuB.className = "line";
+  }
 });
 
 experienceMenu.addEventListener("click", () => {
@@ -73,6 +83,16 @@ experienceMenu.addEventListener("click", () => {
     menu.style.display = "none";
     section[0].style.display = "flex";
   }, 1000);
+
+  if (lineMenuH.className == "line") {
+    lineMenuH.className = "";
+    lineMenuC.className = "";
+    lineMenuB.className = "";
+  } else {
+    lineMenuH.className = "line";
+    lineMenuC.className = "line";
+    lineMenuB.className = "line";
+  }
 });
 
 formationMenu.addEventListener("click", () => {
@@ -91,6 +111,16 @@ formationMenu.addEventListener("click", () => {
     menu.style.display = "none";
     section[2].style.display = "flex";
   }, 1000);
+
+  if (lineMenuH.className == "line") {
+    lineMenuH.className = "";
+    lineMenuC.className = "";
+    lineMenuB.className = "";
+  } else {
+    lineMenuH.className = "line";
+    lineMenuC.className = "line";
+    lineMenuB.className = "line";
+  }
 });
 
 logicielsMenu.addEventListener("click", () => {
@@ -109,6 +139,16 @@ logicielsMenu.addEventListener("click", () => {
     menu.style.display = "none";
     section[1].style.display = "flex";
   }, 1000);
+
+  if (lineMenuH.className == "line") {
+    lineMenuH.className = "";
+    lineMenuC.className = "";
+    lineMenuB.className = "";
+  } else {
+    lineMenuH.className = "line";
+    lineMenuC.className = "line";
+    lineMenuB.className = "line";
+  }
 });
 
 
