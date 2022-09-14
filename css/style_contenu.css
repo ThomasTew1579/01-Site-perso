@@ -304,6 +304,17 @@ a {
     max-width: 900px ;
 }
 
+#Mon_experience a{
+    color: black;
+    text-decoration:underline;
+    /* position: relative; */
+}
+
+#Mon_experience img{
+    width: 80%;
+    border-radius: 10px;
+}
+
 #logiciels .ligne_logo {
     flex-wrap: wrap;
 }
@@ -323,11 +334,12 @@ a {
 
 .ligne_section{
     margin: 0;
-    padding: 0 3vw 0 3vw  ;
+    padding: 0 3vw 20px 3vw  ;
     border-radius: 20px;
     background: linear-gradient(180deg, rgba(252,252,252,0) 0%, rgba(3, 7, 18, 0.045) 100%);
 }
 
+.ligne_section 
 
 
 /* =======================================================================================Section */
