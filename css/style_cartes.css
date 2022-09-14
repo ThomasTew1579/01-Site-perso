@@ -163,11 +163,10 @@
 }
 
 .ligne_logo img{
+    margin-bottom: 2vh;
     height: 6vh;
 }
-.ligne_logo i{
-    font-size: 6vh;
-}
+
 
 /* ----------------carte logiciel */
 
