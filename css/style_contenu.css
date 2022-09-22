@@ -1,7 +1,7 @@
 
 
 @import url("https://fonts.googleapis.com/css2?family=Tourney:wght@200;900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 
 body {
   margin: 0;
@@ -175,7 +175,7 @@ nav{
 }
 
 .contact_nav{
-    font-family: "Varela Round";
+    font-family: "Roboto";
     font-size: 20px;
     margin: 5px;
     color: #fcf3e2;
@@ -295,7 +295,7 @@ a {
     background: linear-gradient(-10deg, rgba(255, 255, 255, 0.826) 0%, rgba(255, 250, 240,1) 100%);
     border-radius: 10px;
     transition: 0.5s ease;
-    font-family: "Varela Round";
+    font-family: "Roboto";
     display: none;
     flex-direction: column;
     opacity: 0;
