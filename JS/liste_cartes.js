@@ -2,6 +2,12 @@
 
 // animation menu--------------------------------------------------------------
 
+/*
+  Remarque globale, pense a faire des fonctions "unitaire" pour decouper ton code.
+  L'avantage de faire des fonctions c'est que leur nom decrit directement l'objectif du bout de code qu'elle contient.
+  Permet aussi d'etre réutilisé par d'autres algo
+ */
+
 let btnMenu = document.getElementById("menuLogo");
 
 let lineMenuH = document.getElementById("haut");
@@ -11,7 +17,9 @@ let lineMenuB = document.getElementById("bas");
 let menu = document.getElementById('menu')
 
 btnMenu.addEventListener("click", () => {
-  
+
+  //Le contenu de ses 2 condition est assez mystique je vois qu'il modifie des props css
+  //Mais je ne sais pas a quoi cela correspond exactement. J'imagine qu'il masque ou affiche une div
   if(menu.style.display == "flex"){
     menu.style.opacity ="100%"
     menu.style.animationDuration = "1s";
@@ -42,11 +50,16 @@ let formationMenu = document.querySelector(".S3");
 let logicielsMenu = document.querySelector(".S4");
 
 presentationMenu.addEventListener("click", () => {
+  /*  Un autre exemple ici il y a bcp de code "technique" il ne contient aucune algorithimie particuliere
+      Il faut decouper des fonctions dedans
+   */
   for(const index in section){
     if(index <= section.length-1){
       section[index].style.display="none";
     }
   }
+  //Cette section est tres procedurale et ne fait que setter des variable donc tu peux en faire une fonction voir 2
+  //Une fonction pour le traitement sur le menu et une pour celui sur la liste des cartes
   menu.style.opacity = "100%";
   menu.style.animationDuration = "1s";
   menu.style.animationName = "disparition_menu";

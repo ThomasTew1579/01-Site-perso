@@ -1,5 +1,12 @@
 //https://api.openbrewerydb.org/breweries?by_country=england&page=1#
 
+/**
+ * Remarque general, pense que les fonctions peuvent retourner des resultats !
+ * Avec des return d'objet tu pourrai enormement simplifier le code et le rendre testable unitairement.
+ * En l'etat quand tu réouvrira ce fichier dans 5 ans tu va galerer a te souvenir de ce que tu as fait.
+ * Avec un meilleur decoupage tu n'aurais presque que a lire nom des fonctions (presque)
+ */
+
 // united_states !370 pages et 7926 resultats!!
 //'Ireland', 'South_Korea', 'England', 'France', 'Scotland'
 let infoPhoneT;
@@ -41,6 +48,7 @@ function clearAll() {
 }
 
 function recherche(pays) {
+  //Lorsque tu as bcp de variables regarde si ca ne vaut pas le coup de creer un objet plus to que des variables type scalaire
   let filtre = "by_country";
   let nombrePage = 1;
   let reponseApi;
@@ -331,7 +339,7 @@ function recherche(pays) {
           reponseApi = requete.response;
           // verification de la viabilité de la recherche
           if (reponseApi.length == 0 && nombrePage == 1) {
-            console.log("rien sur la premiere page");
+            console.log("rien sur la premiere page");//On laisse pas trainer des console log dans du code qui fini sur le repo
             document.querySelector(".search").style.border = "solid red";
             document.querySelector(".searchButton").style.background = "red";
             document.querySelector("#waiting").style.display = "none";
@@ -361,7 +369,7 @@ function recherche(pays) {
               }
               // console.log(nombrePage)
               nombrePage++;
-              recevoirReponse(pays);
+              recevoirReponse(pays);//Tres bizarre cette facon de recup les pages via un variable globale, j'ai a cru a une boucle infinie au debut
             }
           }
         } else {
