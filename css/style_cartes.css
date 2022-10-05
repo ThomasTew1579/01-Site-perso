@@ -46,8 +46,12 @@
     transition: 0.5s ease;
     text-align: center;
     font-family: "Roboto";
+<<<<<<< HEAD
     font-size: 1.8vh;
     height: 55px;
+=======
+    height: 60px;
+>>>>>>> 54fb16de9a9fdfe337c2d626cdef4cd96c76933c
     flex-grow: 0;
 }
 

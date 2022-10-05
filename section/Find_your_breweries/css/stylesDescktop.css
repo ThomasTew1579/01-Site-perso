@@ -1,9 +1,12 @@
 @media screen and (min-width: 1170px) {
+<<<<<<< HEAD
 
   body{
     height: 100%;
   }
 
+=======
+>>>>>>> 54fb16de9a9fdfe337c2d626cdef4cd96c76933c
   .desktop{
     display: flex;
     justify-content: space-between;

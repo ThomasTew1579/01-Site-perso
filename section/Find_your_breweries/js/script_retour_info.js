@@ -10,6 +10,7 @@ let paysChoisie = "france";
 
 recherche(paysChoisie);
 
+<<<<<<< HEAD
 window.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
     getValue();
@@ -19,6 +20,10 @@ window.addEventListener("keypress", function(event) {
 function getValue() {
   //let dispo = selectionPays();   en cours d'optimisation (temps de chargement trop long du script pays disponible)
   let dispo = ['united states', 'ireland', 'south korea', 'england', 'france', 'scotland'];
+=======
+function getValue() {
+  let dispo = selectionPays();
+>>>>>>> 54fb16de9a9fdfe337c2d626cdef4cd96c76933c
 
   let input = document.getElementById("in").value.toLowerCase();
 
@@ -32,6 +37,10 @@ function getValue() {
     } else {
       clearAll();
       recherche(input);
+<<<<<<< HEAD
+=======
+      console.log("patate");
+>>>>>>> 54fb16de9a9fdfe337c2d626cdef4cd96c76933c
     }
   } else {
     document.querySelector(".search").className = "search aviable";
@@ -129,12 +138,22 @@ function recherche(pays) {
       infoNomDep.textContent = province;
       infoNombreDep.textContent = nombreDansProvince;
 
+<<<<<<< HEAD
+=======
+      console.log(nombreDansProvince + " en " + province);
+      console.log(tableauCompteur);
+>>>>>>> 54fb16de9a9fdfe337c2d626cdef4cd96c76933c
     } else {
       nombreDansDepartement =
         tableauCompteurDepartement[tableauDepartement.indexOf(Departement)];
       infoNomDep.textContent = Departement;
       infoNombreDep.textContent = nombreDansDepartement;
 
+<<<<<<< HEAD
+=======
+      console.log(nombreDansDepartement + " en " + Departement);
+      console.log(tableauCompteur);
+>>>>>>> 54fb16de9a9fdfe337c2d626cdef4cd96c76933c
     }
   }
 
@@ -165,9 +184,18 @@ function recherche(pays) {
     villePrincipal = tableauVille[tableauCompteur.indexOf(max)];
 
     villeIndex = tableauVille.indexOf(villePrincipal);
+<<<<<<< HEAD
 
     if (villePrincipal == undefined) {
     } else {
+=======
+    // console.log(villeIndex+" index");
+
+    if (villePrincipal == undefined) {
+      console.log("pas de biere trouvé dans ton blede de merde"); //si l'API ne repond pas avec pays entré dans la recherche
+    } else {
+      console.log(max + " brasseries à " + villePrincipal); // valeur a afficher sur le site
+>>>>>>> 54fb16de9a9fdfe337c2d626cdef4cd96c76933c
       infoNomVille.textContent = "In " + villePrincipal;
       infoNombreVille.textContent = max;
       nombreDepartement(villeIndex, reponse);
@@ -330,6 +358,10 @@ function recherche(pays) {
           reponseApi = requete.response;
           // verification de la viabilité de la recherche
           if (reponseApi.length == 0 && nombrePage == 1) {
+<<<<<<< HEAD
+=======
+            console.log("rien sur la premiere page");
+>>>>>>> 54fb16de9a9fdfe337c2d626cdef4cd96c76933c
             document.querySelector(".search").style.border = "solid red";
             document.querySelector(".searchButton").style.background = "red";
             document.querySelector("#waiting").style.display = "none";
@@ -344,7 +376,14 @@ function recherche(pays) {
               NombreTotalPays = reponseToutesLesPages.length;
               infoNombrePays.textContent = NombreTotalPays;
               definirVillePrincipale(reponseToutesLesPages);
+<<<<<<< HEAD
               recupererNom(reponseToutesLesPages);
+=======
+              console.log("ping");
+              recupererNom(reponseToutesLesPages);
+              console.log("pong");
+              console.log(reponseToutesLesPages.length + " en " + pays);
+>>>>>>> 54fb16de9a9fdfe337c2d626cdef4cd96c76933c
 
               document.querySelector("#waiting").style.display = "none";
               document.querySelector("header").className = "";
@@ -354,6 +393,10 @@ function recherche(pays) {
               for (const indexBrasserie in reponseApi) {
                 reponseToutesLesPages.push(reponseApi[indexBrasserie]);
               }
+<<<<<<< HEAD
+=======
+              // console.log(nombrePage)
+>>>>>>> 54fb16de9a9fdfe337c2d626cdef4cd96c76933c
               nombrePage++;
               recevoirReponse(pays);
             }
