@@ -18,7 +18,7 @@ body {
   color: #fcf3e2;
   bottom: 5%;
   right: 15%;
-  animation: disparition 2s ease 2s forwards;
+  animation: disparition 1s ease 1s forwards;
 }
 
 @keyframes disparition {
@@ -44,7 +44,7 @@ body {
 }
 
 .animationSlide {
-  animation: openSlide 6s ease -1s forwards;
+  animation: openSlide 4.5s ease -1.5s forwards;
 }
 
 @keyframes openSlide {
@@ -60,17 +60,16 @@ body {
 }
 
 .animationFermeture{
-  animation: closeSlide  3s ease 0s forwards;
+  animation: closeSlide  2s ease 0s forwards;
 }
 
 @keyframes closeSlide {
   from{
-    /* background: linear-gradient(0deg, rgb(52, 52, 52) 0%, rgba(3,7,18,1) 70%); */
     width: 0%;
   }
   
   to{
-    /* background: linear-gradient(0deg, rgb(52, 52, 52) 0%, rgba(3,7,18,1) 70%); */
+
     width: 150%;
     }
     
@@ -110,7 +109,7 @@ body {
   font-size: 25px;
   opacity: 0;
   filter: blur(5px);
-  animation: apparition 2s ease 5s forwards;
+  animation: apparition 2s ease 1.5s forwards;
 }
 
 @keyframes apparition {
@@ -161,7 +160,7 @@ body {
   list-style: none;
   font-size: 30px;
   width: 200px;
-  animation: apparitionLogo 2s ease 6s forwards;
+  animation: apparitionLogo 2s ease 2s forwards;
 }
 
 @keyframes apparitionLogo {

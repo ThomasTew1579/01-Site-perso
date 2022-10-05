@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     height: calc(100vh - 90px);
-    animation: apparition 4s ease  forwards;
+    animation: apparition 0.5s ease  forwards;
 
 }
 
@@ -24,7 +24,7 @@
 }
 
 .disparition{
-    animation: disparition 1s ease forwards;
+    animation: disparition 0.5s ease forwards;
 }
 
 @keyframes disparition {
@@ -45,8 +45,9 @@
     border-radius: 10px;
     transition: 0.5s ease;
     text-align: center;
-    font-family: "Varela Round";
-    height: 60px;
+    font-family: "Roboto";
+    font-size: 1.8vh;
+    height: 55px;
     flex-grow: 0;
 }
 
@@ -70,7 +71,7 @@
 
 .contenu_carte{
     display: none;
-    height: calc(100vh - 400px);
+    height: calc(100vh - 380px);
     margin: 0 5% 0 5%;
     justify-content: space-evenly;
     flex-direction: column;
@@ -81,12 +82,13 @@
 
 .contenu_carte i{
     text-align: center;
-    font-size: 40px;
+    font-size: 5vh;
 }
 
 .contenu_carte h4{
     text-align: center;
     color: black;
+    margin-top: 0;
 }
 
 .activeCarte{
@@ -123,11 +125,25 @@
     padding: 0;
 }
 
+.contact_carte a{
+    font-weight: 900;
+    font-family: "Tourney";
+    font-size: 2.5vh;
+}
+
+.contact_carte a:hover{
+    color: rgba(0, 0, 0, 0.604);
+}
+
 .lien_carte{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     margin: 10px;
+}
+
+.lien_carte a:hover{
+    color: rgba(0, 0, 0, 0.604);
 }
 
 /* ------------carte presentation */

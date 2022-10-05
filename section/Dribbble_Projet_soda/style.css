@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+
+
+body{
+    background: linear-gradient(240.93deg, #292929 -0.37%, #1B1B1B 101.45%);
+    font-family: 'Roboto';
+    font-style: normal;
+    
+    overflow: hidden;
+}
+
+.card{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-60%) translateY(-60%);
+    width: 55.75vw;
+    height: 56.375vw;
+    background: linear-gradient(64.5deg, #292929 2.1%, #1C1C1C 100.55%);
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 3.75vw;
+    scale: 80%;
+}
+
+#logo{
+    position: absolute;
+    height: 92.040359% ;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#canette{
+    position: absolute;
+    width: 31.61435% ;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.apparition_canette{
+    animation: apparition_canette 0.5s ease forwards ;
+}
+
+.disparition_canette{
+    animation: disparition_canette 0.5s ease forwards ;
+}
+
+@keyframes apparition_canette {
+    from{
+        left: 90%;
+        opacity: 0;
+    }
+    to{
+        left: 50%;
+        opacity: 100%;
+    }
+}
+
+@keyframes disparition_canette {
+    from{
+        left: 50%;
+        opacity: 100%;
+    }
+    to{
+        left: 0%;
+        opacity: 0;
+    }
+}
+
+.ruban{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 29.876682%;
+    height: 25.44345% ;
+    overflow: hidden;
+    
+}
+
+.ruban div{
+    position: absolute;
+    height: 5.56vw;
+    width: 24.5vw ;
+    bottom: 1.85vw;
+    right: -7vw;
+    rotate: -45deg;
+
+    background: linear-gradient(273.09deg, #AF0C12 10.3%, #AF0C12 22.07%, #F40009 47.2%, #AF0C12 73.03%, #AF0C12 85.57%);
+}
+
+#btn_next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 58%;
+    font-weight: 700;
+    font-size: 1.5vw;
+    line-height: 1.8vw;
+    letter-spacing: -0.165px;
+    color: #FFFFFF;
+}
+
+
+#texte{
+    position: absolute;
+    width: 28.251121% ;
+    height: 15.077% ;
+    left: 5.8295% ;
+    top: 77.827051% ;
+    letter-spacing: -0.165px;
+
+    color: #FFFFFF;
+}
+
+.apparition_texte{
+    animation: apparition_texte 0.5s ease-out forwards ;
+}
+
+.disparition_texte{
+    animation: disparition_texte 0.2s ease forwards ;
+}
+
+@keyframes apparition_texte {
+    from{
+        opacity: 0;
+        transform: translateY(-90%);
+    }
+    to{
+        opacity: 100%;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes disparition_texte {
+        from{
+        opacity: 100%;
+        transform: translateY(0%);
+    }
+    to{
+        opacity: 0%;
+        transform: translateY(50%);
+    }
+}
+
+#titre{
+    font-weight: 700;
+    font-size: 2vw;
+    line-height: 1.12vw;
+}
+
+#decrpition{
+    font-weight: 400;
+    font-size: 1.12vw;
+    line-height: 1.3125vw;
+}
+
+.liens{
+    position: absolute;
+    font-size: 3vw;
+}
+
+.liens ul{
+    margin: 0;
+    padding: 0;
+}
+
+.liens li{
+    list-style: none;
+    margin: 10px;
+    transition: 0.5s;
+}
+
+.liens a {
+    color: #ffffffaa;
+}
+
+.liens a:hover{
+    color: #FFFFFF;
+}
+
+.liens li:hover{
+    rotate: 360deg;
+    scale: 1.5;
+    text-shadow: 0px 0px 30px #AF0C12;
+}
+
+@media (max-width: 1300px){
+    .card{
+        scale: 1;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    
+    .liens{
+        width: 100%;
+        text-align: center;
+        font-size: 10vw;
+        top: 3%;
+    }
+    .liens li{
+        display: inline;
+    }
+}

@@ -14,12 +14,13 @@ btnMenu.addEventListener("click", () => {
   
   if(menu.style.display == "flex"){
     menu.style.opacity ="100%"
-    menu.style.animationDuration = "1s";
     menu.style.animationName = "disparition_menu";
-    setTimeout( () => { menu.style.display = "none"},1000)
+    menu.style.animationDuration = "0.5s";
+    setTimeout( () => { menu.style.display = "none"},500)
   }else{
     menu.style.opacity ="0%"
     menu.style.animationName = "apparition_menu";
+    menu.style.animationDuration = "0.5s";
     menu.style.display = "flex"
   }
   
@@ -40,22 +41,12 @@ let presentationMenu = document.querySelector(".S1")
 let experienceMenu = document.querySelector(".S2");
 let formationMenu = document.querySelector(".S3");
 let logicielsMenu = document.querySelector(".S4");
+let retourPresentation = document.querySelector(".retour_presentation")
+
+
 
 presentationMenu.addEventListener("click", () => {
-  for(const index in section){
-    if(index <= section.length-1){
-      section[index].style.display="none";
-    }
-  }
-  menu.style.opacity = "100%";
-  menu.style.animationDuration = "1s";
-  menu.style.animationName = "disparition_menu";
-  listeCarte.style.animationName = "apparition";
-  listeCarte.style.display="flex";
-  setTimeout(() => {
-    menu.style.display = "none";
-  }, 1000);
-
+  AfficherCartePresentation()
   if (lineMenuH.className == "line") {
     lineMenuH.className = "";
     lineMenuC.className = "";
@@ -66,6 +57,29 @@ presentationMenu.addEventListener("click", () => {
     lineMenuB.className = "line";
   }
 });
+
+retourPresentation.addEventListener("click", () => {
+  AfficherCartePresentation()
+});
+
+
+function AfficherCartePresentation (){
+  for(const index in section){
+    if(index <= section.length-1){
+      section[index].style.display="none";
+    }
+  }
+  menu.style.opacity = "100%";
+  menu.style.animationDuration = "1s";
+  menu.style.animationName = "disparition_menu";
+  listeCarte.style.animationName = "apparition";
+  listeCarte.style.display="flex";
+  retourPresentation.style.display="none"
+  setTimeout(() => {
+    menu.style.display = "none";
+  }, 1000);
+  
+}
 
 experienceMenu.addEventListener("click", () => {
   for (const index in section) {
@@ -82,6 +96,7 @@ experienceMenu.addEventListener("click", () => {
   setTimeout(() => {
     menu.style.display = "none";
     section[0].style.display = "flex";
+    retourPresentation.style.display="flex"
   }, 1000);
 
   if (lineMenuH.className == "line") {
@@ -110,6 +125,8 @@ formationMenu.addEventListener("click", () => {
   setTimeout(() => {
     menu.style.display = "none";
     section[2].style.display = "flex";
+    retourPresentation.style.display="flex"
+
   }, 1000);
 
   if (lineMenuH.className == "line") {
@@ -138,6 +155,8 @@ logicielsMenu.addEventListener("click", () => {
   setTimeout(() => {
     menu.style.display = "none";
     section[1].style.display = "flex";
+    retourPresentation.style.display="flex"
+
   }, 1000);
 
   if (lineMenuH.className == "line") {
@@ -181,7 +200,7 @@ contenuCarte[0].addEventListener("click", () => {
   setTimeout( () => { 
     listeCarte.style.display ="none";
     section[0].style.display ="flex"
-
+    retourPresentation.style.display="flex"
 },1000)
 })
 
@@ -205,6 +224,7 @@ contenuCarte[1].addEventListener("click", () => {
   setTimeout(() => {
     listeCarte.style.display = "none";
     section[1].style.display = "flex";
+    retourPresentation.style.display="flex"
   }, 1000);
 });
 
@@ -228,6 +248,7 @@ contenuCarte[2].addEventListener("click", () => {
   setTimeout(() => {
     listeCarte.style.display = "none";
     section[2].style.display = "flex";
+    retourPresentation.style.display="flex"
   }, 1000);
 });
 
@@ -251,3 +272,56 @@ document.querySelector('.C1').addEventListener("click", () => {
 // ----------------------------------------------------annimation carte section
 
 // =================================================evenement page liste cartes
+
+
+//Animation galerie ============================================================
+
+
+
+let decalageSlide = 0;
+var decalage = 0;
+
+
+function gallerySlide (signe, nomSlider) {
+    let image = document.querySelectorAll("#"+nomSlider+" .image_galerie");
+    let slider = document.querySelector("#"+nomSlider);
+    let largeurImage = image[0].width + 20;
+    decalage = largeurImage
+
+    if (!signe) {
+        decalageSlide = decalageSlide + decalage;
+        if(decalageSlide > 0){
+            decalageSlide = decalage - image.length * decalage;
+        }
+    } else {
+        decalageSlide = decalageSlide - decalage;
+        if (decalageSlide <= image.length * -decalage) {
+          decalageSlide = 0;
+        }
+    };
+    
+    slider.style.transform ="translateX("+decalageSlide+"px)";
+
+};
+
+function regarderVideo (adresse){
+    let player = document.createElement("div");
+    player.className = "player_video";
+    player.innerHTML =
+      '<iframe width="100%" height="70%" src="https://www.youtube.com/embed/' +
+      adresse +
+      '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><i class="fa-solid fa-x" onclick="fermerVideo()"></i>';
+      document.body.prepend(player)
+}
+
+function fermerVideo (){
+    let player = document.querySelector(".player_video");
+    player.remove();
+}
+
+
+
+
+
+
+//============================================================Animation galerie 

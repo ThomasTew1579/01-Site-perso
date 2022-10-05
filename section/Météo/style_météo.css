@@ -1,12 +1,12 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
 html, body {
   background: #2980B9;
   background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);
   background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);
   min-width: 400px;
-  font-family: "Varela Round";
+  font-family: "Roboto";
 }
 
 .container{

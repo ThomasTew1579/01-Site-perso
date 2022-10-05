@@ -8,10 +8,9 @@ changerDeVille.addEventListener("click", () => {
 });
 
 function recevoirTemperature(ville) {
-  const url =
-    "https://api.openweathermap.org/data/2.5/weather?q=" +
-    ville +
-    "&appid=dc8c9153e8adaad0ec8bf635818c0d42&units=metric";
+  const url = 'https://api.openweathermap.org/data/2.5/weather?q=' 
+  + ville 
+  + '&appid=dc8c9152e8adaad0ec8bf635818c0d42&units=metric';
 
   let requete = new XMLHttpRequest();
   requete.open("GET", url);
